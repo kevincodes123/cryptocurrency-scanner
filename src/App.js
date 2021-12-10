@@ -9,8 +9,6 @@ import Footer from './components/Footer/Footer';
 import { getAuth, onAuthStateChanged } from '@firebase/auth';
 import './App.scss'
 
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyCfZK8W_BE0zNhQwn1Tc-kAaf5o4U5Jwsg",
   authDomain: "auth-874fa.firebaseapp.com",
@@ -20,11 +18,11 @@ const firebaseConfig = {
   appId: "1:718589742269:web:66bfdc65983436fb59bbd4"
 };
 
-
 initializeApp(firebaseConfig);
 
 function App() {
   const [user, setUser] = useState(null);
+  console.log(user);
 
   useEffect(() => {
     const auth = getAuth();
